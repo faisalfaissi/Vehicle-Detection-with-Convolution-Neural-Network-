@@ -9,9 +9,9 @@ The objective of this project is to dectect vehicle and non vehicle from image u
 # Dependencies
 
 - tensorflow
-tflearn
-h5py
-hdf5
-SciPy
-numpy
-cv2
+- tflearn
+- h5py
+- hdf5
+- SciPy
+- numpy
+- cv2
