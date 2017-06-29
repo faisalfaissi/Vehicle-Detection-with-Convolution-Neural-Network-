@@ -38,4 +38,19 @@ python test.py
 
 # Train Dataset
 
-create dataset from video, capture video from any enviromnet where Vehicle and non vehicle then crop vehicle and non vehile from every frame check the file <b>crop_data<b>
+create dataset from video, capture video from any enviromnet where Vehicle and non vehicle then crop vehicle and non vehile from every frame check the file for crop image <b>crop_data.m<b>
+
+when extrat data from video using crop_data.m file it Save picture in Data folder. create a new file and save record as
+0 for rikshaws.
+1 for cars.
+2 for bikes
+4 for trucks/buses.
+3 for non vehicles.
+
+check the file format <b>dataset.txt<b>
+
+# Test Dataset
+
+Take picture fom any enviroment or select image from dataset fro testing
+
+
