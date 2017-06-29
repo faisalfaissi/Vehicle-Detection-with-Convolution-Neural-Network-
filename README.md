@@ -21,3 +21,8 @@ The objective of this project is to dectect vehicle and non vehicle from image u
 This repository comes with trained model which you can directly test using the following command.
 
 python test.py
+
+# Implementation
+
+# Model
+# Layers
