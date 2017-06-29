@@ -22,7 +22,20 @@ This repository comes with trained model which you can directly test using the f
 
 python test.py
 
-# Implementation
+## Implementation
 
-# Model
+### Model
 # Layers
+1. Conv: 64 filters of size 3x3 with ReLU activation
+2. Pooling: with filter size 2x2
+3. Conv: 32 filters of size 3x3 with ReLU activation
+4. Pooling: with filter size 2x2
+5. Conv: 32 filters of size 3x3 with ReLU activation
+6. Pooling: with filter size 2x2
+7. Fully Connected: with 256 neurons and ReLU activation and dropout with probability 0.75
+8. Fully Connected: with 256 neurons and ReLU activation and dropout with probability 0.75
+9. Fully Connected output layer: with 2 neurons (equal to number of classes) and softmax classifier.
+
+# Train Dataset
+
+create dataset from video, capture video from any enviromnet where Vehicle and non vehicle then crop vehicle and non vehile from every frame check the file <b>crop_data<b>
