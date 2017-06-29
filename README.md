@@ -15,3 +15,9 @@ The objective of this project is to dectect vehicle and non vehicle from image u
 - SciPy
 - numpy
 - cv2
+
+# How to Run the Model
+
+This repository comes with trained model which you can directly test using the following command.
+
+python test.py
