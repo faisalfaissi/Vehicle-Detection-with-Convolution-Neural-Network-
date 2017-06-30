@@ -1,6 +1,5 @@
 # Vehicle-Detection-with-Convolution-Neural-Network-
 
-
 # Overview
 
 The objective of this project is to train CNN model on images of different vehiclesand using sliding window approach to detect different types of vehilces in the image.
@@ -23,11 +22,11 @@ Download and Install the following packages
 ## Traing Data
 
 When  we extract the images from video using crop_data.m file we saved the images in a new folder and labeled them as
-0 for rikshaws.
-1 for cars.
-2 for bikes
-4 for trucks/buses.
-3 for non vehicles.
+- 0 for rikshaws.
+- 1 for cars.
+- 2 for bikes
+- 4 for trucks/buses.
+- 3 for non vehicles.
 
 check the file format <b>dataset.txt</b>
 
