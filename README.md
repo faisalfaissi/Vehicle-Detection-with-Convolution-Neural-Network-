@@ -68,6 +68,14 @@ python test.py
 
 # Result
 
+## Training
+
+#### Positive Image
+![positive](https://user-images.githubusercontent.com/26170668/27723536-139483ac-5d87-11e7-9777-4f860b7a90d5.png)
+
+#### Negative Image
+![nagative](https://user-images.githubusercontent.com/26170668/27723538-19226ce4-5d87-11e7-8922-cb055850617f.png)
+
 run the model using cnn for 5 iterations which gives the following result.
 ![result1](https://user-images.githubusercontent.com/26170668/27723476-a8b866fc-5d86-11e7-95c8-d5c1960c6d8c.png)
 
