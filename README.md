@@ -102,9 +102,12 @@ optimizer
 ## Testing on Image
 
 This is our originl Image on which we perform testing.
+
 ![test1](https://user-images.githubusercontent.com/26170668/27746961-bd8c3886-5de2-11e7-98f5-7a4842fad7b5.jpg)
 
-   sliding window apporach is used having width and height 100*100. Firsly we use a function all_rec and get the following result in which it detect all the Images. 
+   sliding window apporach is used having width and height 100*100. 
+   
+   Firstly we use a function all_rec and get the following result in which it detect all the Images. 
  ![all_rec](https://user-images.githubusercontent.com/26170668/27745828-4b7d795c-5dde-11e7-977d-a4f8df512b95.png)
 
 
