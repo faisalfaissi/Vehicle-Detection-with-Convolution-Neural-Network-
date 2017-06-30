@@ -86,15 +86,15 @@ follwing are the files to run the model
     Run the cnn model for 5 epox which gives accuracy 0.8398 with validation accuracy of 0.8796 using learning date of 0.001 with adam
     optimizer
    
-   ![result2](https://user-images.githubusercontent.com/26170668/27723484-b90ce5a0-5d86-11e7-81cc-58512b31dd78.png)
-   
+   ![result1](https://user-images.githubusercontent.com/26170668/27747443-93bca692-5de4-11e7-9fdf-c4300dda9f22.png)
+
    
    
     Run the cnn model for 20 epox which gives accuracy 0.9454 with validation accuracy of 0.8586 using learning date of 0.001 with adam
     optimizer
    
-   
-   ![result](https://user-images.githubusercontent.com/26170668/27723699-c152cd0a-5d87-11e7-9302-d8e609d07f9d.png)
+   ![result2](https://user-images.githubusercontent.com/26170668/27747425-7efdab02-5de4-11e7-8d2e-b030ca6473c7.png)
+
 
 
 ## Testing on Image
