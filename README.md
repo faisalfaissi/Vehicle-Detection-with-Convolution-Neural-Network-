@@ -21,8 +21,9 @@ Download and Install the following packages
 
 ## Traing Data
 
+isme yeh b bta de total data humara 951 jisme se 0 classes 127 hnn 1 jo hnn wo 409 hai 2 195 hai or 3 217 hai yeh bta de ki hurr class mai itne itne sample hai 
 When  we extract the images from video using crop_data.m file we saved the images in a new folder and labeled them as
-- 0 for rikshaws.
+- 0 for rikshaws. 
 - 1 for cars.
 - 2 for bikes
 - 4 for trucks/buses.
@@ -77,6 +78,9 @@ follwing are the files to run the model
 ## Load Dataset
  tflearn image preloader was used to load train dataset using a file 
  
+
+# Result
+
 ## Training
    Run the cnn model for 5 epox which gives accuracy 0.8398 with validation accuracy of 0.8796 using learning date of 0.001 with adam optimizer
    
@@ -89,13 +93,21 @@ follwing are the files to run the model
    
    ![result](https://user-images.githubusercontent.com/26170668/27723699-c152cd0a-5d87-11e7-9302-d8e609d07f9d.png)
 
-# Result
 
 ## Testing on Image
+   
+  yeh 1st test hai bta de k yeh humari orignal image hai jipe humne isko tet kya hai
+![test](https://user-images.githubusercontent.com/26170668/27746960-bd4fad58-5de2-11e7-8b11-fbcbb15cbf20.jpg)
+   
+   yr isme bta de k phele humene all rec use kiye to iska result yeh hai isme sb ko detect kya hai ist 
+   sliding window apporach is used having width and height 100*100 
+ ![all_rec](https://user-images.githubusercontent.com/26170668/27745828-4b7d795c-5dde-11e7-977d-a4f8df512b95.png)
 
-   sliding window apporach is used having width and height 100*100
+bta de k yeh humari orignal image hai jipe humne isko tet kya hai
+![test1](https://user-images.githubusercontent.com/26170668/27746961-bd8c3886-5de2-11e7-98f5-7a4842fad7b5.jpg)
 
-
+isme bta de k humne grop rec use kiye hai uska result yeh hai
+![result](https://user-images.githubusercontent.com/26170668/27745882-7e84bc8e-5dde-11e7-876f-2d21c55d389c.png)
 
 # Discussion
 
