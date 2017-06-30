@@ -69,6 +69,7 @@ python test.py
 # Result
 
 run the model using cnn for 5 iterations which gives the following result.
+![project_result_one](https://user-images.githubusercontent.com/26170668/27723308-da76b6ae-5d85-11e7-8198-e3c3fd354b14.png)
 
 
 
