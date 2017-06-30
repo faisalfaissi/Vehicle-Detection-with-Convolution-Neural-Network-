@@ -20,14 +20,13 @@ Download and Install the following packages
  We capture the video near the local traffic singal using camera and using the matlab code from the mentioned matlab file <b>crop_data.m</b> to detect the images  from the video.
 
 ## Traing Data
-
-isme yeh b bta de total data humara 951 jisme se 0 classes 127 hnn 1 jo hnn wo 409 hai 2 195 hai or 3 217 hai yeh bta de ki hurr class mai itne itne sample hai 
 When  we extract the images from video using crop_data.m file we saved the images in a new folder and labeled them as
 - 0 for rikshaws. 
 - 1 for cars.
 - 2 for bikes
 - 4 for trucks/buses.
 - 3 for non vehicles.
+In our case datatset contains 951 images in which 127 images were labeled as 0, 409 images were labeled as 1, 195 images were labeled as 2 and 219 images were labeled as 3 and the rest ones were labeled as 4.
 
 check the file format <b>dataset.txt</b>
 
@@ -101,21 +100,18 @@ optimizer
 
 ## Testing on Image
 
-bta de k yeh humari orignal image hai jipe humne isko tet kya hai
+This is our originl Image on which we perform testing.
 ![test1](https://user-images.githubusercontent.com/26170668/27746961-bd8c3886-5de2-11e7-98f5-7a4842fad7b5.jpg)
 
-   
-   yr isme bta de k phele humene all rec use kiye to iska result yeh hai isme sb ko detect kya hai ist 
-   sliding window apporach is used having width and height 100*100 
+   sliding window apporach is used having width and height 100*100. Firsly we use a function all_rec and get the following result in which it detect all the Images. 
  ![all_rec](https://user-images.githubusercontent.com/26170668/27745828-4b7d795c-5dde-11e7-977d-a4f8df512b95.png)
 
 
-  yeh 2nd test hai bta de k yeh humari orignal image hai jipe humne isko tet kya hai
-
+Than we perform the same function on our original Image and than perform testing and we got the following result.
 ![test](https://user-images.githubusercontent.com/26170668/27746960-bd4fad58-5de2-11e7-8b11-fbcbb15cbf20.jpg)
 
 
-isme bta de k humne grop rec use kiye hai uska result yeh hai
+After using all_rec we got many rectangles. To avoid this we use group_rec function here and got following results.
 ![result](https://user-images.githubusercontent.com/26170668/27745882-7e84bc8e-5dde-11e7-876f-2d21c55d389c.png)
 
 # Discussion
