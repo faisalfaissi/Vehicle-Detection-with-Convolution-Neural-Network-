@@ -84,7 +84,7 @@ follwing are the files to run the model
 ## Training
     
 Run the cnn model for 5 epox which gives accuracy 0.8398 with validation accuracy of 0.8796 using learning date of 
-0.001 with adam optimizer
+0.001 with adam optimizer and 80% data used for tsing and 20% data used for validation.
    
    ![result1](https://user-images.githubusercontent.com/26170668/27747443-93bca692-5de4-11e7-9fdf-c4300dda9f22.png)
 
