@@ -4,7 +4,7 @@
 
 # Overview
 
-The objective of this project is to dectect vehicle and non vehicle from image using sliding window approach. Train CNN model on dataset to acheive this objective.
+The objective of this project is to dectect vehicle and non vehicle from images using sliding window approach and then train CNN model on that dataset to detect vehicles from unseen data(generalization).
 
 # Dependencies
 
@@ -36,21 +36,47 @@ python test.py
 8. Fully Connected: with 256 neurons and ReLU activation and dropout with probability 0.75
 9. Fully Connected output layer: with 2 neurons (equal to number of classes) and softmax classifier.
 
-# Train Dataset
+# Dataset
 
-create dataset from video, capture video from any enviromnet where Vehicle and non vehicle then crop vehicle and non vehile from every frame check the file for crop image <b>crop_data.m<b>
+capture video from any enviromnet where Vehicles and non vehicles are present.capture images from the video frame by frame using matlab code from the mentioned matlab file <b>crop_data.m</b>
 
-when extrat data from video using crop_data.m file it Save picture in Data folder. create a new file and save record as
+when extrat data from video using crop_data.m file it Save the pictures in Data folder. create a new file and save record as
 0 for rikshaws.
 1 for cars.
 2 for bikes
 4 for trucks/buses.
 3 for non vehicles.
 
-check the file format <b>dataset.txt<b>
+check the file format <b>dataset.txt</b>
+
+# Training
+
+run the model using cnn for 5 iterations which gives the following result.
+
+
+
+
+run the model using cnn for 20 iterations which gives the following result.
+
+
+
 
 # Test Dataset
 
-Take picture fom any enviroment or select image from dataset fro testing
+Take picture fom any enviroment and load that image in <test.py> file 
+and run the following command on the terminal
+
+python test.py
+
+
+# Result
+
+.....
+
+# Discussion
+
+
+
+
 
 
