@@ -33,17 +33,14 @@ check the file format <b>dataset.txt</b>
 
 ## Training
 
-run the model using cnn for 5 iterations 
-run the model using cnn for 20 iterations 
-
 This repository comes with trained model which you can directly test using the following command.
 
-python test.py
+python train_project.py
 
 
 ## Implementation
 
-### Model
+### CNN
 # Layers
 1. Conv: 64 filters of size 3x3 with ReLU activation
 2. Pooling: with filter size 2x2
@@ -53,10 +50,7 @@ python test.py
 6. Pooling: with filter size 2x2
 7. Fully Connected: with 256 neurons and ReLU activation and dropout with probability 0.75
 8. Fully Connected: with 256 neurons and ReLU activation and dropout with probability 0.75
-9. Fully Connected output layer: with 2 neurons (equal to number of classes) and softmax classifier.
-
-
-
+9. Fully Connected output layer: with 5 neurons (equal to number of classes) and softmax classifier.
 
 # Test Dataset
 
@@ -64,7 +58,6 @@ Take picture fom any enviroment and load that image in <test.py> file
 and run the following command on the terminal
 
 python test.py
-
 
 # Result
 
@@ -87,8 +80,11 @@ run the model using cnn for 20 iterations which gives the following result.
 ![result2](https://user-images.githubusercontent.com/26170668/27723484-b90ce5a0-5d86-11e7-81cc-58512b31dd78.png)
 .....
 
+## Test 
+![result](https://user-images.githubusercontent.com/26170668/27723699-c152cd0a-5d87-11e7-9302-d8e609d07f9d.png)
+
 # Discussion
-This project took 4 days to completePorject was divided into different tasks like capturing video, detection of vehicles (creating dataset) and train the cnn model on dataset for unseen data and testing on new image. All the tasks were completed on different days.
+This project took 4 days to complete Porject was divided into different tasks like capturing video, detection of vehicles (creating dataset) and train the cnn model on dataset for unseen data and testing on new image. All the tasks were completed on different days.
 
 # Reference
 
