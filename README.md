@@ -26,6 +26,7 @@ When  we extract the images from video using crop_data.m file we saved the image
 - 2 for bikes
 - 4 for trucks/buses.
 - 3 for non vehicles.
+
 In our case datatset contains 951 images in which 127 images were labeled as 0, 409 images were labeled as 1, 195 images were labeled as 2 and 219 images were labeled as 3 and the rest ones were labeled as 4.
 
 check the file format <b>dataset.txt</b>
