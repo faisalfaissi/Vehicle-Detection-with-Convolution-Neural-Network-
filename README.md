@@ -1,13 +1,13 @@
 # Vehicle-Detection-with-Convolution-Neural-Network-
 
-# Deep Learning
 
 # Overview
 
-The objective of this project is to dectect different types of vehicles from images using sliding window approach and then train CNN model on that dataset to detect vehicles from unseen data(generalization).
+The objective of this project is to train CNN model on images of different vehiclesand using sliding window approach to detect different types of vehilces in the image.
 
 # Dependencies
 
+Download and Install the following packages
 - tensorflow
 - tflearn
 - h5py
@@ -18,9 +18,11 @@ The objective of this project is to dectect different types of vehicles from ima
 
 # Dataset
 
-capture video from any enviromnet where Vehicles and non vehicles are present.capture images from the video frame by frame using matlab code from the mentioned matlab file <b>crop_data.m</b>
+ We capture the video near the local traffic singal using camera and using the matlab code from the mentioned matlab file <b>crop_data.m</b> to detect the images  from the video.
 
-when extrat data from video using crop_data.m file it Save the pictures in Data folder. create a new file and save record as
+## Traing Data
+
+When  we extract the images from video using crop_data.m file we saved the images in a new folder and labeled them as
 0 for rikshaws.
 1 for cars.
 2 for bikes
@@ -29,62 +31,77 @@ when extrat data from video using crop_data.m file it Save the pictures in Data 
 
 check the file format <b>dataset.txt</b>
 
+some positive and negative images are as follows:
+
+### Positive Image
+![positive](https://user-images.githubusercontent.com/26170668/27723536-139483ac-5d87-11e7-9777-4f860b7a90d5.png)
+
+### Negative Image
+![nagative](https://user-images.githubusercontent.com/26170668/27723538-19226ce4-5d87-11e7-8922-cb055850617f.png)
+
+## Test Data
+
+Images containing multiple vehicles expected from another video not used for training.
+
 # How to Run the Model
 
-## Training
+follwing are the files to run the model
+1. train_project.py: Used to train the data
+2. test.py:Load the image for testing and detects a vehicles using sliding window approach
+3. dataset.txt: set of images in a formatted order 
+4. crop_data.m: matlab code for cropping imaes from video
 
-This repository comes with trained model which you can directly test using the following command.
 
-python train_project.py
+  First run the matlab code using matlab on the captured video to detect images and create a dataset file named 
+  as dataset.txt and then run the files by typing the follwoing commands on terminal
+  
+  python train_project.py  
+  python test.py      
 
 
-## Implementation
+# Implementation
 
-### CNN
-# Layers
-1. Conv: 64 filters of size 3x3 with ReLU activation
-2. Pooling: with filter size 2x2
-3. Conv: 32 filters of size 3x3 with ReLU activation
-4. Pooling: with filter size 2x2
-5. Conv: 32 filters of size 3x3 with ReLU activation
-6. Pooling: with filter size 2x2
-7. Fully Connected: with 256 neurons and ReLU activation and dropout with probability 0.75
+## Convolution Neural Network (CNN)
+### Layers
+1. Input data shape= [100*100,3]
+2. Conv: 64 filters of size 3x3 with ReLU activation
+3. Pooling: with filter size 2x2
+4. Conv: 32 filters of size 3x3 with ReLU activation
+5. Pooling: with filter size 2x2
+6. Conv: 32 filters of size 3x3 with ReLU activation
+7. Pooling: with filter size 2x2
 8. Fully Connected: with 256 neurons and ReLU activation and dropout with probability 0.75
-9. Fully Connected output layer: with 5 neurons (equal to number of classes) and softmax classifier.
+9. Fully Connected: with 256 neurons and ReLU activation and dropout with probability 0.75
+10. Fully Connected output layer: with 5 neurons (equal to number of classes) and softmax classifier.
 
-# Test Dataset
 
-Take picture fom any enviroment and load that image in <test.py> file 
-and run the following command on the terminal
-
-python test.py
+## Load Dataset
+ tflearn image preloader was used to load train dataset using a file 
+ 
+## Training
+   Run the cnn model for 5 epox which gives accuracy 0.8398 with validation accuracy of 0.8796 using learning date of 0.001 with adam optimizer
+   
+   ![result2](https://user-images.githubusercontent.com/26170668/27723484-b90ce5a0-5d86-11e7-81cc-58512b31dd78.png)
+   
+   
+   
+    Run the cnn model for 20 epox which gives accuracy 0.9454 with validation accuracy of 0.8586 using learning date of 0.001 with adam optimizer
+   
+   
+   ![result](https://user-images.githubusercontent.com/26170668/27723699-c152cd0a-5d87-11e7-9302-d8e609d07f9d.png)
 
 # Result
 
-## Training
+## Testing on Image
 
-#### Positive Image
-![positive](https://user-images.githubusercontent.com/26170668/27723536-139483ac-5d87-11e7-9777-4f860b7a90d5.png)
-
-#### Negative Image
-![nagative](https://user-images.githubusercontent.com/26170668/27723538-19226ce4-5d87-11e7-8922-cb055850617f.png)
-
-run the model using cnn for 5 iterations which gives the following result.
-![result1](https://user-images.githubusercontent.com/26170668/27723476-a8b866fc-5d86-11e7-95c8-d5c1960c6d8c.png)
+   sliding window apporach is used having width and height 100*100
 
 
-
-
-
-run the model using cnn for 20 iterations which gives the following result.
-![result2](https://user-images.githubusercontent.com/26170668/27723484-b90ce5a0-5d86-11e7-81cc-58512b31dd78.png)
-.....
-
-## Test 
-![result](https://user-images.githubusercontent.com/26170668/27723699-c152cd0a-5d87-11e7-9302-d8e609d07f9d.png)
 
 # Discussion
-This project took 4 days to complete Porject was divided into different tasks like capturing video, detection of vehicles (creating dataset) and train the cnn model on dataset for unseen data and testing on new image. All the tasks were completed on different days.
+
+This project aims to detect vehicles on unseen data using cnn network. The difficulty faced so far was to capture the video of atleast 25 minutes so that atleast 1000 images can be cropped down from the video. cropping is done using matlab code but it requires selection point for each frame so it was a difficult task to do. Moreover cnn network using 5 and 20 epox gives different accuracies which was a challenge as well.However to produce better result(more accuracy) we can increase the epox and try different learning rates.
+
 
 # Reference
 
