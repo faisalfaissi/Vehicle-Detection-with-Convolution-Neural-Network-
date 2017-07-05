@@ -2,7 +2,7 @@
 
 # Overview
 
-The objective of this project is to train CNN model on images of different vehiclesand using sliding window approach to detect different types of vehilces in the image.
+The objective of this project is to train CNN model on images of different vehicles and using sliding window approach to detect different types of vehilces in the image.
 
 # Dependencies
 
@@ -17,10 +17,10 @@ Download and Install the following packages
 
 # Dataset
 
- We capture the video near the local traffic singal using camera and using the matlab code from the mentioned matlab file <b>crop_data.m</b> to detect the images  from the video.
+ We capture the video near the local traffic signal using camera and using the matlab code from the mentioned matlab file <b>crop_data.m</b> to crop the images  from the video.
 
 ## Traing Data
-When  we extract the images from video using crop_data.m file we saved the images in a new folder and labeled them as
+After extracting the images from video using crop_data.m file we save the images in a separate folder and labeled them as
 - 0 for rikshaws. 
 - 1 for cars.
 - 2 for bikes
@@ -31,28 +31,28 @@ In our case datatset contains 951 images in which 127 images were labeled as 0, 
 
 check the file format <b>dataset.txt</b>
 
-some positive and negative images are as follows:
+Some positive and negative images are as follows:
 
 ### Positive Image
-![positive](https://user-images.githubusercontent.com/26170668/27723536-139483ac-5d87-11e7-9777-4f860b7a90d5.png)
+![positive](https://user-images.githubusercontent.com/26170668/27723536-139483ac-5d87-11e7-9777-4f860b7a90d5.png).
 
 ### Negative Image
-![nagative](https://user-images.githubusercontent.com/26170668/27723538-19226ce4-5d87-11e7-8922-cb055850617f.png)
+![nagative](https://user-images.githubusercontent.com/26170668/27723538-19226ce4-5d87-11e7-8922-cb055850617f.png).
 
 ## Test Data
 
-Images containing multiple vehicles expected from another video not used for training.
+Images containing multiple vehicles extracted from another video not used for training.
 
 # How to Run the Model
 
-follwing are the files to run the model
-1. train_project.py: Used to train the data
-2. test.py:Load the image for testing and detects a vehicles using sliding window approach
-3. dataset.txt: set of images in a formatted order 
-4. crop_data.m: matlab code for cropping imaes from video
+Follwing are the files to run the model
+1. train_project.py: Used to train the data.
+2. test.py:Load the image for testing and detects a vehicles using sliding window approach.
+3. dataset.txt: set of images in a formatted order .
+4. crop_data.m: matlab code for cropping imaes from video.
 
 
-  First run the matlab code using matlab on the captured video to detect images and create a dataset file named 
+  First run the matlab code on the captured video to detect images and create a dataset file named 
   as dataset.txt and then run the files by typing the follwoing commands on terminal
   
   python train_project.py  
@@ -62,6 +62,7 @@ follwing are the files to run the model
 # Implementation
 
 ## Convolution Neural Network (CNN)
+We use CNN in our case as CNN is best fit where we have dataset of images.
 ### Layers
 1. Input data shape= [100*100,3]
 2. Conv: 64 filters of size 3x3 with ReLU activation
@@ -83,7 +84,7 @@ follwing are the files to run the model
 
 ## Training
     
-Run the cnn model for 5 epox which gives accuracy 0.8398 with validation accuracy of 0.8796 using learning date of 
+We ran the cnn model for 5 epox and got accuracy 0.8398 with validation accuracy of 0.8796 using learning date of 
 0.001 with adam optimizer and 80% data used for tsing and 20% data used for validation.
    
    ![result1](https://user-images.githubusercontent.com/26170668/27747443-93bca692-5de4-11e7-9fdf-c4300dda9f22.png)
@@ -107,7 +108,7 @@ This is our originl Image on which we perform testing.
 
    sliding window apporach is used having width and height 100*100. 
    
-   Firstly we use a function all_rec and get the following result in which it detect all the Images. 
+   
  ![all_rec](https://user-images.githubusercontent.com/26170668/27745828-4b7d795c-5dde-11e7-977d-a4f8df512b95.png)
 
 
