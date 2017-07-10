@@ -17,7 +17,7 @@ Download and Install the following packages
 
 # Dataset
 
- We capture the video near the local traffic signal using camera and using the matlab code from the mentioned matlab file <b>crop_data.m</b> to crop the images  from the video.
+ We capture the video near the local traffic signal using camera and use matlab to extract images from the video. 
 
 ## Traing Data
 After extracting the images from video using crop_data.m file we save the images in a separate folder and labeled them as
